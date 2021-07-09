@@ -22,19 +22,17 @@ def my_min(list)
 end
 
 
-# def largest_conti_subsum(list)
-#     array = []
-#     list.each_with_index do |ele, i| 
-#         list.each_with_index do |ele2, j|
-#             if j >= i   
-#                 array << list[i..j]
-#             end
-#         end
-#     end
-#     array.map! {|arr| arr.sum}.max
-# end
-
-# testing
+def largest_conti_subsum(list)
+    array = []
+    list.each_with_index do |ele, i| 
+        list.each_with_index do |ele2, j|
+            if j >= i   
+                array << list[i..j]
+            end
+        end
+    end
+    array.map! {|arr| arr.sum}.max
+end
 
 def better_conti(list)
     sum = 0
